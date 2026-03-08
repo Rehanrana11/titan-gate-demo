@@ -12,5 +12,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install titan-gate
         run: pip install titan-gate==1.0.1
-      - name: Show receipt store
-        run: ls .titan/receipts/ || echo 'No receipts yet'
+      - name: Verify receipt
+        run: titan-verify .titan/receipts/demo-receipt.json --key 0000000000000000000000000000000000000000000000000000000000000000
